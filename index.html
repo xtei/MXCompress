@@ -2,19 +2,16 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <meta name="description" content="O Mix Compressor é uma ferramenta poderosa e fácil de usar que ajuda os desenvolvedores a otimizar seus códigos CSS e JavaScript. Isso resulta em um carregamento mais rápido e desempenho mais rápido das páginas web.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MX Compress</title>
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css"
+    />
+    <link rel="stylesheet" href="../src/css/dracula.css" />
     <link rel="stylesheet" href="../src/css/index.css" />
     <link rel="stylesheet" href="../src/css/responsive.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -23,7 +20,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.4/purify.min.js"></script>
     <script src="https://unpkg.com/esprima@~4.0/dist/esprima.js"></script>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'unsafe-inline' 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com"
+    />
   </head>
   <body>
     <div class="dialog-bg"></div>
@@ -87,32 +89,43 @@
         <h3 class="title-section sct1">
           Faça uma compressão do seu código Java Script
         </h3>
-
         <hr />
         <div class="input-area">
           <div class="header-input-area">
             <div class="options-header-input-area file-upload">
               <div class="upload-label">
-                <h6>
+                <h5>
                   Copie e cole aqui embaixo o seu codigo ou importe um arquivo
-                  JS/CSS arrastando até aqui
-                </h6>
+                  JS arrastando até aqui
+                </h5>
                 <i class="bi bi-filetype-js"></i>
                 <i class="bi bi-filetype-css"></i>
               </div>
               <input
                 type="file"
-                id="file-input2"
-                accept=".js, .css"
+                id="file-inputjs"
+                accept=".js"
+                style="display: none"
+              />
+            </div>
+            <div class="options-header-input-area file-uploadcss">
+              <div class="upload-label">
+                <h5>
+                  Copie e cole aqui embaixo o seu codigo ou importe um arquivo
+                  Css arrastando até aqui
+                </h5>
+                <i class="bi bi-filetype-js"></i>
+                <i class="bi bi-filetype-css"></i>
+              </div>
+              <input
+                type="file"
+                id="file-inputcss"
+                accept=".css"
                 style="display: none"
               />
             </div>
           </div>
           <hr />
-          <div class="buttons-area">
-            <div class="rigth-options-buttons"></div>
-          </div>
-          <hr class="rgh" style="display: none" />
           <div class="options-left">
             <h3 class="title-section">Adicione configurações Pré-definidas</h3>
             <div class="option-advanced">
@@ -163,16 +176,27 @@
             </div>
           </div>
           <hr />
+          <pre>
+            <code contenteditable="true" id="output-set" class="language-javascript">
+//Adicione aqui seu codigo, sinta-se a vontade, obrigado por usar o site :)
+const MyName = "Carlos";
+const MyAge = 17;
+const MyCountry = "Brasil";
+alert('Olá, Meu nome é ${MyName}, tenho ${MyAge}, moro no ${MyCountry}!');
+            </code>
+          </pre>
+          <pre>
+            <code contenteditable="true" id="output-set-css" class="hljs language-css">
+/*Adicione aqui seu codigo, sinta-se a vontade, obrigado por usar o site :)*/
+body {
+  background: #181717;
+  overflow-x: hidden;
+}
+            </code>
+          </pre>
           <button class="compressBtn">
             <i class="bi bi-file-earmark-zip"></i> Comprimir Codigo
           </button>
-          <hr />
-          <textarea
-            cols="10"
-            rows="25"
-            id="codeinput"
-            placeholder="Cole seu codigo Java Script/Css aqui"
-          ></textarea>
           <button disabled class="clearBtn">
             <i class="bi bi-file-earmark-zip"></i> Limpar Código
           </button>
@@ -180,13 +204,18 @@
           <button class="copyBtn" disabled>
             <i class="bi bi-clipboard2"></i> Copiar o codigo
           </button>
-          <textarea
-            cols="10"
-            rows="25"
-            readonly
-            id="codeoutput"
-            placeholder="Seu codigo comprimido vai aparecer aqui"
-          ></textarea>
+          <pre>
+            <code id="output-end" class="language-javascript">
+//Veja aqui seu codigo comprimido, sinta-se a vontade, obrigado por usar o site 
+            </code>
+          </pre>
+          <pre>
+            <code id="output-end-css" class="hljs language-css">
+/*Veja aqui seu codigo comprimido, sinta-se a vontade, obrigado por usar o site*/
+            </code>
+          </pre>
+          <hr class="rgh" style="display: none" />
+          <div class="rigth-options-buttons"></div>
         </div>
         <hr />
       </section>
@@ -237,6 +266,10 @@
         </div>
       </footer>
     </main>
-    <script src="../src/index.js"></script>
+    <script
+      nonce="abcdef"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"
+    ></script>
+    <script nonce="abcdef" src="../src/index.js"></script>
   </body>
 </html>
