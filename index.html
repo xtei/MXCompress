@@ -49,15 +49,15 @@
     <meta
       http-equiv="Content-Security-Policy"
       content="
-    default-src 'self';
-    script-src 'self' https://cdnjs.cloudflare.com https://unpkg.com 'nonce-abcdef';
-    style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com 'unsafe-inline' https://cdn.jsdelivr.net;
-    font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
-    img-src 'self' https://i.ibb.co;
-    connect-src 'self';
-    base-uri 'self';
-    form-action 'self';
-  "
+      default-src 'self';
+      script-src 'self' https://cdnjs.cloudflare.com https://unpkg.com 'nonce-abcdef' 'strict-dynamic' 'unsafe-inline';
+      style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com 'unsafe-inline' https://cdn.jsdelivr.net;
+      font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
+      img-src 'self' https://i.ibb.co;
+      connect-src 'self';
+      base-uri 'self';
+      form-action 'self';
+    "
     />
   </head>
   <body>
@@ -306,23 +306,74 @@
         </div>
       </footer>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/css/css.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/hint/show-hint.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/hint/anyword-hint.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/edit/matchbrackets.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/edit/closebrackets.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/foldcode.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/foldgutter.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/brace-fold.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/comment-fold.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/indent-fold.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/lint/lint.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/lint/javascript-lint.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jshint/2.13.4/jshint.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/lint/css-lint.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/csslint/1.0.5/csslint.min.js"></script>
+    <script
+      nonce="abcdef"
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"
+    ></script>
+    <script
+      nonce="abcdef"
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"
+    ></script>
+    <script
+      nonce="abcdef"
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/css/css.min.js"
+    ></script>
+    <script
+      nonce="abcdef"
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/hint/show-hint.min.js"
+    ></script>
+    <script
+      nonce="abcdef"
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/hint/anyword-hint.min.js"
+    ></script>
+    <script
+      nonce="abcdef"
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/edit/matchbrackets.min.js"
+    ></script>
+    <script
+      nonce="abcdef"
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/edit/closebrackets.min.js"
+    ></script>
+    <script
+      nonce="abcdef"
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/foldcode.min.js"
+    ></script>
+    <script
+      nonce="abcdef"
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/foldgutter.min.js"
+    ></script>
+    <script
+      nonce="abcdef"
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/brace-fold.min.js"
+    ></script>
+    <script
+      nonce="abcdef"
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/comment-fold.min.js"
+    ></script>
+    <script
+      nonce="abcdef"
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/indent-fold.min.js"
+    ></script>
+    <script
+      nonce="abcdef"
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/lint/lint.min.js"
+    ></script>
+    <script
+      nonce="abcdef"
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/lint/javascript-lint.min.js"
+    ></script>
+    <script
+      nonce="abcdef"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jshint/2.13.4/jshint.min.js"
+    ></script>
+    <script
+      nonce="abcdef"
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/lint/css-lint.min.js"
+    ></script>
+    <script
+      nonce="abcdef"
+      src="https://cdnjs.cloudflare.com/ajax/libs/csslint/1.0.5/csslint.min.js"
+    ></script>
     <script nonce="abcdef" src="../src/index.js"></script>
   </body>
 </html>
