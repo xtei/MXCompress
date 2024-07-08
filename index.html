@@ -46,6 +46,19 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <script src="https://unpkg.com/esprima@~4.0/dist/esprima.js"></script>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+    default-src 'self';
+    script-src 'self' https://cdnjs.cloudflare.com https://unpkg.com 'nonce-abcdef';
+    style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com 'unsafe-inline' https://cdn.jsdelivr.net;
+    font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
+    img-src 'self' https://i.ibb.co;
+    connect-src 'self';
+    base-uri 'self';
+    form-action 'self';
+  "
+    />
   </head>
   <body>
     <div class="loading-back">
@@ -84,7 +97,11 @@
     </div>
     <header class="hidden">
       <div class="logo-area">
-        <img src="https://i.ibb.co/WWj4RW9/logo-site.png" alt="logo-site" border="0">
+        <img
+          src="https://i.ibb.co/WWj4RW9/logo-site.png"
+          alt="logo-site"
+          border="0"
+        />
         <h1 class="title-logo">Mix Compressor</h1>
       </div>
       <div class="rigth-options-header">
@@ -218,7 +235,7 @@
           <div class="area-editor-css hidden">
             <textarea id="code-editor-css"> </textarea>
           </div>
-          
+
           <button class="compressBtn hidden">
             <i class="bi bi-file-earmark-zip"></i> Comprimir Codigo
           </button>
