@@ -4,14 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MX Compress</title>
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css"
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/hint/show-hint.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/dracula.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/foldgutter.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/lint/lint.min.css"
     />
     <link rel="stylesheet" href="../src/css/index.css" />
     <link rel="stylesheet" href="../src/css/responsive.css" />
@@ -34,7 +45,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.4/purify.min.js"></script>
     <script src="https://unpkg.com/esprima@~4.0/dist/esprima.js"></script>
   </head>
   <body>
@@ -72,11 +82,9 @@
         />
       </div>
     </div>
-    <header>
+    <header class="hidden">
       <div class="logo-area">
-        <a href="https://ibb.co/WWj4RW9">
-          <img src="https://i.ibb.co/WWj4RW9/logo-site.png" alt="logo-site" border="0">
-        </a>
+        <img src="https://i.ibb.co/WWj4RW9/logo-site.png" alt="logo-site" border="0">
         <h1 class="title-logo">Mix Compressor</h1>
       </div>
       <div class="rigth-options-header">
@@ -112,7 +120,7 @@
         <hr />
         <div class="input-area">
           <div class="header-input-area">
-            <div class="options-header-input-area file-upload">
+            <div class="options-header-input-area file-upload hidden">
               <div class="upload-label">
                 <h5>
                   Copie e cole aqui embaixo o seu codigo ou importe um arquivo
@@ -128,7 +136,7 @@
                 style="display: none"
               />
             </div>
-            <div class="options-header-input-area file-uploadcss">
+            <div class="options-header-input-area file-uploadcss hidden">
               <div class="upload-label">
                 <h5>
                   Copie e cole aqui embaixo o seu codigo ou importe um arquivo
@@ -204,37 +212,37 @@
             >
           </button>
           <hr />
-          <div class="area-editor-js">
+          <div class="area-editor-js hidden">
             <textarea id="code-editor-js"> </textarea>
           </div>
-          <div class="area-editor-css">
+          <div class="area-editor-css hidden">
             <textarea id="code-editor-css"> </textarea>
           </div>
-          <hr />
-          <button class="compressBtn">
+          
+          <button class="compressBtn hidden">
             <i class="bi bi-file-earmark-zip"></i> Comprimir Codigo
           </button>
-          <button class="pastBtn">
+          <button class="pastBtn hidden">
             <i class="bi bi-clipboard2"></i> Colar o codigo
           </button>
-          <button disabled class="clearBtn">
+          <button disabled class="clearBtn hidden">
             <i class="bi bi-trash3"></i> Limpar Código
           </button>
           <hr />
-          <button class="copyBtn" disabled>
+          <button class="copyBtn hidden" disabled>
             <i class="bi bi-clipboard2"></i> Copiar o codigo
           </button>
-          <div class="output-area-js">
+          <div class="output-area-js hidden">
             <textarea disabled id="output-end"> </textarea>
           </div>
-          <div class="output-area-css">
+          <div class="output-area-css hidden">
             <textarea disabled id="output-end-css"> </textarea>
           </div>
-          <div class="rigth-options-buttons"></div>
+          <div class="rigth-options-buttons hidden"></div>
         </div>
         <hr />
       </section>
-      <footer class="footer">
+      <footer class="footer hidden">
         <div class="left-footer">
           <h5 class="description-infors">
             Para otimizar o desempenho do seu site, a compressão de arquivos é
@@ -284,6 +292,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/hint/show-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/hint/anyword-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/foldcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/foldgutter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/brace-fold.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/comment-fold.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/indent-fold.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/lint/lint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/lint/javascript-lint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jshint/2.13.4/jshint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/lint/css-lint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/csslint/1.0.5/csslint.min.js"></script>
     <script nonce="abcdef" src="../src/index.js"></script>
   </body>
 </html>
