@@ -29,9 +29,9 @@ MX Compress é uma aplicação web que permite a compressão de arquivos JavaScr
 
 ### Licença
 
-
+- Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes
 
 ### Contato
 
--Email: mixcompress@gmail.com
--Meu GitHUb: https://github.com/xtei
+- Email: mixcompress@gmail.com
+- Meu GitHUb: https://github.com/xtei
