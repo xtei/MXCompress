@@ -34,6 +34,12 @@
   background: #282a36;
 }
 
+.CodeMirror .CodeMirror-code .cm-tab {
+  display: inline-block;
+  width: 2em;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="2" height="12"><line x1="0" y1="0" x2="0" y2="12" stroke="%236272a4" stroke-width="1"/></svg>')
+    repeat-y left center;
+}
 
 .CodeMirror-hints {
   background: #282a36;
