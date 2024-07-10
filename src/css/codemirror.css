@@ -3,9 +3,46 @@
   font-size: 13px;
   font-weight: 400;
   font-family: "Fira Code", monospace;
-  height: 350px;
+  height: 400px;
   padding: 5px 5px 5px 5px;
   background-color: #282c34;
+}
+
+.output-area-js .CodeMirror, .output-area-css .CodeMirror {
+  height: 100px;
+}
+
+.expandBtn {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1e202aae;
+  border-radius: 50%;
+  cursor: pointer;
+  top: -30px;
+}
+
+.expandBtn:hover {
+  background: #00060c;
+}
+
+.area-editor-js.expanded, .area-editor-css.expanded {
+  position: fixed;
+  z-index: 1000;
+  width: 90%;
+  height: 100%;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.area-editor-js.expanded .CodeMirror, .area-editor-css.expanded .CodeMirror {
+  height: 700px;
 }
 
 .CodeMirror .CodeMirror-code {
@@ -23,11 +60,11 @@
 }
 
 .CodeMirror .CodeMirror-code .CodeMirror-line {
-  padding-left: 40px;
+  padding-left: 35px;
 }
 
 .CodeMirror .CodeMirror-linebackground {
-  left: 40px !important;
+  left: 35px !important;
 }
 
 .CodeMirror .CodeMirror-gutter-wrapper {
@@ -36,18 +73,17 @@
 
 .CodeMirror .CodeMirror-code .cm-tab {
   display: inline-block;
-  width: 2em;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="2" height="12"><line x1="0" y1="0" x2="0" y2="12" stroke="%236272a4" stroke-width="1"/></svg>')
-    repeat-y left center;
+  width: 2em; 
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="2" height="12"><line x1="0" y1="0" x2="0" y2="12" stroke="%236272a4" stroke-width="1"/></svg>') repeat-y left center;
 }
 
 .CodeMirror-hints {
-  background: #282a36;
+  background: #282a36; 
   color: #f8f8f2;
-  border: 1px solid #6272a4;
-  font-family: "Fira Code", monospace;
-  font-size: 14px;
-  z-index: 10000;
+  border: 1px solid #6272a4; 
+  font-family: 'Fira Code', monospace; 
+  font-size: 14px; 
+  z-index: 10000; 
   padding: 5px 10px 5px 10px;
   cursor: pointer;
 }
@@ -57,7 +93,7 @@
 }
 
 .cm-s-dracula .CodeMirror-lines {
-  background-color: #1e202a1b;
+  background-color: #1e202a;
   color: #f8f8f2;
   border-radius: 10px;
   margin: 0 5px 0 5px;
@@ -67,6 +103,7 @@
   background: #282424;
 }
 
+/* Cor das seleções */
 .cm-s-dracula .CodeMirror-selected {
   background: #44475a;
 }
@@ -91,7 +128,7 @@
   color: #666;
   text-shadow: none;
   font-family: arial;
-  line-height: 0.3;
+  line-height: .3;
   cursor: pointer;
 }
 
@@ -136,7 +173,7 @@
 }
 
 .CodeMirror-code .CodeMirror-indent::before {
-  content: " ";
+  content: ' ';
   display: inline-block;
   height: 100%;
   width: 1px;
