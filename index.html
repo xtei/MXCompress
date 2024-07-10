@@ -24,7 +24,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/lint/lint.min.css"
     />
-    <link rel="stylesheet" href="../src/css/codemirror.css">
+    <link rel="stylesheet" href="../src/css/codemirror.css" />
     <link rel="stylesheet" href="../src/css/index.css" />
     <link rel="stylesheet" href="../src/css/responsive.css" />
 
@@ -106,14 +106,10 @@
         <h1 class="title-logo">Mix Compressor</h1>
       </div>
       <div class="rigth-options-header">
-        <ul>
-          <li class="options active CompressJS">
-            <i class="bi bi-filetype-js"></i> Comprimir JS
-          </li>
-          <li class="options CompressCss">
-            <i class="bi bi-filetype-css"></i> Comprimir CSS
-          </li>
-        </ul>
+        <button class="open-g setGitHub">
+          <i class="bi bi-github"></i> Clique aqui para acessar o projeto no
+          GitHub
+        </button>
       </div>
       <i class="bi bi-list setmenu"></i>
       <div class="drop-bg">
@@ -137,6 +133,17 @@
         </h3>
         <hr />
         <div class="input-area">
+          <div class="select-modes">
+            <div class="mode-slct slc js">
+              <i class="bi bi-filetype-js"></i>
+              <h5 class="mode-slc">JavaScript</h5>
+            </div>
+            <div class="mode-slct css">
+              <i class="bi bi-filetype-css"></i>
+              <h5 class="mode-slc">Css</h5>
+            </div>
+          </div>
+          <hr />
           <div class="header-input-area">
             <div class="options-header-input-area file-upload hidden">
               <div class="upload-label">
@@ -232,11 +239,15 @@
           <hr />
           <div class="area-editor-js hidden">
             <textarea id="code-editor-js"> </textarea>
+            <i class="bi bi-arrows-angle-expand expandBtn expandbtnJsEditor">
+            </i>
           </div>
           <div class="area-editor-css hidden">
             <textarea id="code-editor-css"> </textarea>
+            <i
+              class="bi bi-arrows-angle-expand expandBtn expandbtnCssEditor"
+            ></i>
           </div>
-
           <button class="compressBtn hidden">
             <i class="bi bi-file-earmark-zip"></i> Comprimir Codigo
           </button>
@@ -250,10 +261,10 @@
           <button class="copyBtn hidden" disabled>
             <i class="bi bi-clipboard2"></i> Copiar o codigo
           </button>
-          <div class="output-area-js hidden" style="display: none;">
+          <div class="output-area-js hidden" style="display: none">
             <textarea disabled id="output-end"> </textarea>
           </div>
-          <div class="output-area-css hidden" style="display: none;">
+          <div class="output-area-css hidden" style="display: none">
             <textarea disabled id="output-end-css"> </textarea>
           </div>
           <div class="rigth-options-buttons hidden"></div>
@@ -308,7 +319,7 @@
       </footer>
       <div class="contact-area">
         <ul>
-          <li><a href="mxcompress.netlify.app/" target="_blank">MiXCompress 2024 Copyright ©</a></li>
+          <li><a href="" target="_blank">MiXCompress 2024 Copyright ©</a></li>
         </ul>
       </div>
     </main>

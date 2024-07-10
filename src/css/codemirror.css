@@ -3,7 +3,7 @@
   font-size: 13px;
   font-weight: 400;
   font-family: "Fira Code", monospace;
-  max-height: 230px;
+  height: 350px;
   padding: 5px 5px 5px 5px;
   background-color: #282c34;
 }
@@ -57,7 +57,7 @@
 }
 
 .cm-s-dracula .CodeMirror-lines {
-  background-color: #1e202a;
+  background-color: #1e202a1b;
   color: #f8f8f2;
   border-radius: 10px;
   margin: 0 5px 0 5px;
@@ -67,7 +67,6 @@
   background: #282424;
 }
 
-/* Cor das seleções */
 .cm-s-dracula .CodeMirror-selected {
   background: #44475a;
 }
