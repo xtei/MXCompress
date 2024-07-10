@@ -9,7 +9,7 @@ reportBtn.addEventListener("click", () => {
   showDialog("Bugs Encontrados | Feedback", "Reportar bug | Sugestões");
 });
 
-const setGitHubBtn = document.querySelector(".setGitHub");
+const setGitHubBtn = document.querySelectorAll(".setGitHub");
 setGitHubBtn.addEventListener("click", () => {
   window.location.href = "https://github.com/xtei/MXCompress";
 });
