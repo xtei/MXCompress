@@ -14,7 +14,7 @@ setGitHubBtn.addEventListener("click", () => {
   window.location.href = "https://github.com/xtei/MXCompress";
 });
 const setGitHubBtn1 = document.querySelector(".setGitHub1");
-setGitHubBtn.addEventListener("click", () => {
+setGitHubBtn1.addEventListener("click", () => {
   window.location.href = "https://github.com/xtei/MXCompress";
 });
 
