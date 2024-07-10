@@ -2,6 +2,15 @@
 
 MX Compress é uma aplicação web que permite a compressão de arquivos JavaScript e CSS de forma eficiente. Com várias opções de otimização, a ferramenta visa melhorar o desempenho do seu site reduzindo o tamanho dos arquivos.
 
+## Tabela de Conteúdos
+
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Uso](#uso)
+- [Contribuições](#contribuições)
+- [Licença](#licença)
+- [Contato](#contato)
+
 ## Funcionalidades
 
 - **Compressão de JavaScript**: Carregue, cole ou arraste arquivos JS para comprimir.
