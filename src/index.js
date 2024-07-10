@@ -13,6 +13,10 @@ const setGitHubBtn = document.querySelector(".setGitHub");
 setGitHubBtn.addEventListener("click", () => {
   window.location.href = "https://github.com/xtei/MXCompress";
 });
+const setGitHubBtn1 = document.querySelector(".setGitHub1");
+setGitHubBtn.addEventListener("click", () => {
+  window.location.href = "https://github.com/xtei/MXCompress";
+});
 
 function getDescriptionText(title) {
   switch (title) {
